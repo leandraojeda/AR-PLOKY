@@ -13,8 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Circuito AR — Laboratorio interactivo',
-  description: 'Demostración sencilla de un circuito eléctrico sobre la cámara.',
+  title: 'La aventura de la electricidad',
+  description: 'Juego infantil sencillo para descubrir cómo funciona un circuito.',
+  other: { google: 'notranslate' },
 };
 
 export default function RootLayout({
@@ -23,9 +24,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es">
+    <html lang="es" translate="no" className="notranslate" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning
       >
         {children}
       </body>
